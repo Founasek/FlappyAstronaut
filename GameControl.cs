@@ -42,7 +42,7 @@ public class GameControl : MonoBehaviour {
         {
             instance = this;
         }
-        else if (instance != null)
+        else 
         {
             Destroy(gameObject);
         }
@@ -172,18 +172,21 @@ public class GameControl : MonoBehaviour {
     {
         if (gameOver == false)
         {
-            gravity = Random.Range(0, 2);
+            gravity = Random.Range(0, 3);
             if (gravity == 0 && reverseGravity == true)
             {
+                StartCoroutine(GravityChange0());
+                yield return new WaitForSeconds(0.5f);
                 reverseGravity = false;
                 playerRB.gravityScale = 1;
-                StartCoroutine(GravityChange0());
+
             }
             else if (gravity == 1 && reverseGravity == false)
             {
+                StartCoroutine(GravityChange0());
+                yield return new WaitForSeconds(0.5f);
                 reverseGravity = true;
                 playerRB.gravityScale = -1;
-                StartCoroutine(GravityChange0());
             }
             else
             {

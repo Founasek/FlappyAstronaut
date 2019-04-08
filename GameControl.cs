@@ -176,7 +176,6 @@ public class GameControl : MonoBehaviour {
             if (gravity == 0 && reverseGravity == true)
             {
                 StartCoroutine(GravityChange0());
-                yield return new WaitForSeconds(0.5f);
                 reverseGravity = false;
                 playerRB.gravityScale = 1;
 
@@ -184,7 +183,6 @@ public class GameControl : MonoBehaviour {
             else if (gravity == 1 && reverseGravity == false)
             {
                 StartCoroutine(GravityChange0());
-                yield return new WaitForSeconds(0.5f);
                 reverseGravity = true;
                 playerRB.gravityScale = -1;
             }

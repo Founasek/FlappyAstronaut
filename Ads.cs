@@ -10,7 +10,7 @@ public class Ads : MonoBehaviour {
 
     void Start()
     {
-       if(AdsCounter == 4)
+       if(AdsCounter >= 4)
         {
             AdsCounter = 0;
             AdsShow();

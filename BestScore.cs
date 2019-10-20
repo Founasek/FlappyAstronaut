@@ -10,7 +10,7 @@ public class BestScore : MonoBehaviour {
 
 	void Update ()
     {
-        BestScoreText.text = "Best score: " + PlayerPrefs.GetInt("HighScore", 0).ToString();
+        BestScoreText.text = "Best score: " + PlayerPrefs.GetInt("HighScore", 0).ToString(); // Showing bestscore in UI
     }
 	
 

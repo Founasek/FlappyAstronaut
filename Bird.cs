@@ -25,7 +25,8 @@ public class Bird : MonoBehaviour {
     void Update ()
     {
         if (isDead == false)
-        {      
+        {   
+            // Main controls of the Astronaut while he is alive
             if (Input.GetMouseButtonDown(0) && GameControl.instance.reverseGravity == true)
             {     
                 myRigidBody.velocity = Vector2.zero;
@@ -40,7 +41,7 @@ public class Bird : MonoBehaviour {
             }
         }
     }
-     void OnCollisionEnter2D()
+     void OnCollisionEnter2D() // If collision is detected -> astronaut will die - END GAME - function GameControl.instance.BirdDied();
     {
         myRigidBody.velocity = Vector2.zero;
         isDead = true;

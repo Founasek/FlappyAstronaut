@@ -11,12 +11,11 @@ public class ColumnPool : MonoBehaviour {
     public float spawnRate = 4f;
     public float columnMin = -1f;
     public float columnMax = 3.5f;
-    public float heightMin = 10f;
-    public float heightMax = 20f;
 
     private GameObject[] columns;
     private Vector2 objectPoolPosition = new Vector2(10f, -1f);
     private float timeSinceLastSpawned;
+    private float spawnXPostition = 10f;
     private int currentColumn = 0;
   
     // Use this for initialization
@@ -36,7 +35,6 @@ public class ColumnPool : MonoBehaviour {
         if (GameControl.instance.gameOver == false && timeSinceLastSpawned >= spawnRate)
         {
             timeSinceLastSpawned = 0;
-	    float spawnXPostition = Random.Range(heightMin, heightMax);
             float spawnYposition = Random.Range(columnMin, columnMax);
             columns[currentColumn].transform.position = new Vector2(spawnXPostition, spawnYposition);
             currentColumn++;

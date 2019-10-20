@@ -34,6 +34,7 @@ public class PlayGamesScript : MonoBehaviour
 */
     public static void ShowAchievementsUI()
     {
+        Debug.Log("Show Achievements");
         Social.ShowAchievementsUI();
     }
     #endregion /Achievements
@@ -46,6 +47,7 @@ public class PlayGamesScript : MonoBehaviour
 
     public static void ShowLeaderboardsUI()
     {
+        Debug.Log("Show Leaderboards");
         Social.ShowLeaderboardUI();
     }
     #endregion /Leaderboards

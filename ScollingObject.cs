@@ -7,7 +7,9 @@ public class ScollingObject : MonoBehaviour {
 
     private Rigidbody2D myRigidBody2D;
     
-    
+    public GameObject Astonaut;
+
+
 	void Start ()
     {
         myRigidBody2D = GetComponent<Rigidbody2D>();
@@ -21,5 +23,6 @@ public class ScollingObject : MonoBehaviour {
         {
             myRigidBody2D.velocity = Vector2.zero;
         }
+
 	}
 }

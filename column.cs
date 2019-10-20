@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class column : MonoBehaviour {
 
-	private void OnTriggerEnter2D(Collider2D other)
+	
+    // If astronauts flew through gap between column, add score
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.GetComponent<Bird>() != null)
         {

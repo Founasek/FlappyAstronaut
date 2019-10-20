@@ -10,7 +10,7 @@ public class Ads : MonoBehaviour {
 
     void Start()
     {
-       if(AdsCounter >= 4)
+       if(AdsCounter == 10) // If condition is true -> call function adsShow to play ad
         {
             AdsCounter = 0;
             AdsShow();
@@ -23,12 +23,12 @@ public class Ads : MonoBehaviour {
 
     public void AdsShow()
     {
-#if UNITY_ADS
-        if (Advertisement.IsReady() && AdsCounter == 3)
-        {
-            Advertisement.Show();
-            AdsCounter = 0;
-        }
-#endif
+
+         if (Advertisement.IsReady() && AdsCounter == 10) // If Ad is loaded by Unity and adsCounter is >= 10 -> Play ad and reset counter
+         {
+             Advertisement.Show();
+             AdsCounter = 0;
+         }
+         
     }
 }
